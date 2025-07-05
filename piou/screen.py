@@ -13,12 +13,7 @@ screens = [
                         widget.CurrentLayout(),
                         widget.GroupBox(),
                         widget.Prompt(),
-                        widget.Chord(
-                            chords_colors={
-                                "launch": ("#ff0000", "#ffffff"),
-                            },
-                            name_transform=lambda name: name.upper(),
-                        ),
+                        widget.WindowName(),
                         # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                         # widget.StatusNotifier(),
                         widget.Systray(),

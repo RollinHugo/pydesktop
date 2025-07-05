@@ -1,7 +1,7 @@
 from libqtile.widget.base import _Widget
 from libqtile.widget import TextBox
 
-from colors import Color
+from colors import Color, Solarized
 
 class ColoredWidgetArray:
     GL_FONT_NAME = "MesloLGS NF"
@@ -18,7 +18,8 @@ class ColoredWidgetArray:
                  include_last:bool=False,
                  font_name:str=None,
                  font_size:int=None,
-                 unicode_values:dict[str,str]=None
+                 unicode_values:dict[str,str]=None,
+                 colors:list[Color]=None
             ):
         assert direction is None or direction in ('left', 'right')
         assert isinstance(widgets, list) and len(widgets) > 0
@@ -49,7 +50,10 @@ class ColoredWidgetArray:
             self.widgets.append(self.get_separator())
             self.__is_sep.append(True)
 
-        self.colors = Color.random_colors(10)
+        if colors:
+            self.colors = colors
+        else:
+            self.colors = Color.random_colors(10)
         self.colorize(self.colors)
 
     def get_separator(self) -> TextBox:
