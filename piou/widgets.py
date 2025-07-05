@@ -35,11 +35,8 @@ class ColoredWidgetArray:
         if include_first:
             self.widgets.append(self.get_separator())
             self.__is_sep.append(True)
-        if len(widgets) > 0:
-            self.widgets.append(widgets[0])
-            self.__is_sep.append(False)
 
-        for widget in widgets[1:-1]:
+        for widget in widgets[:-1]:
             self.widgets.append(widget)
             self.__is_sep.append(False)
             self.widgets.append(self.get_separator())
