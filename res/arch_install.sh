@@ -27,7 +27,7 @@ arch-chroot /mnt /bin/bash <<"EOT"
 set -e
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
 hwclock --systohc
-printf "\nen_US.UTF-8 UTF-8" >> /etc/locale.gen
+printf "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo "KEYMAP=fr" > /etc/vconsole.conf

@@ -14,7 +14,8 @@ sudo pacman -S \
     xterm \
     xorg-xinit \
     xorg-server \
-    xorg-xrdb
+    xorg-xrdb \
+    mypy
 
 pikaur -Sy powerline-fonts-git
 

@@ -29,7 +29,7 @@ from libqtile.config import Click, Drag, Match
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
-from keys import keys
+from keys import keys, groups
 from screen import screens
 
 mod = "mod4"
