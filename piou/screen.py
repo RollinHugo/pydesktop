@@ -2,20 +2,23 @@
 from libqtile import bar, widget
 from libqtile.config import Screen
 
-
 from widgets import ColoredWidgetArray
-
 
 screens = [
     Screen(
         top=bar.Bar(
-            [
-                ColoredWidgetArray(
+        [
+                *ColoredWidgetArray(
                     [
                         widget.CurrentLayout(),
                         widget.GroupBox(),
-                        widget.Prompt(),
-                        widget.WindowName(),
+                        widget.Prompt()
+                    ],
+                    direction='right'
+                ).widgets,
+                widget.WindowName(),
+                *ColoredWidgetArray(
+                    [
                         widget.Chord(
                             chords_colors={
                                 "launch": ("#ff0000", "#ffffff"),
@@ -28,8 +31,8 @@ screens = [
                         widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                         widget.QuickExit(),
                     ],
-                    direction='left',
-
+                    direction='left'
+                ).widgets
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders

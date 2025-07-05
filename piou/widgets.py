@@ -80,3 +80,4 @@ class ColoredWidgetArray:
                 c1 = colors[c_idx]
             else:
                 widget.foreground = c0
+
