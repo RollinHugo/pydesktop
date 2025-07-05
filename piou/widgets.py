@@ -52,6 +52,9 @@ class ColoredWidgetArray:
             self.widgets.append(self.get_separator())
             self.__is_sep.append(True)
 
+        self.colors = Color.random_colors(10)
+        self.colorize(self.colors)
+
     def get_separator(self) -> TextBox:
         return TextBox(
             fmt=self.unicode_values[self.direction],
