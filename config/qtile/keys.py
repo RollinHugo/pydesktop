@@ -44,9 +44,6 @@ _key_cmd = [
     Key([mod], 'n',             lazy.spawn('networkmanager_dmenu'), desc="Network"),
 
     # Toggle between different layouts as defined below
-    Key(['alt'], "Tab", lazy.group.next_window(), desc="Focus next window"),
-    Key(['alt', 'shift'], "Tab", lazy.group.prev_window(), desc="Focus previous window"),
-
     Key(
         [mod],
         "f",
