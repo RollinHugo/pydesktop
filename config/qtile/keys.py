@@ -1,3 +1,4 @@
+from libqtile import qtile
 from libqtile.config import Key, Group
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal

@@ -1,3 +1,5 @@
+from typing import Optional
+
 from libqtile.widget.base import _Widget
 from libqtile.widget import TextBox
 
@@ -13,13 +15,13 @@ class ColoredWidgetArray:
 
     def __init__(self,
                  widgets: list[_Widget],
-                 direction:str=None,
+                 direction:Optional[str]=None,
                  include_first:bool=False,
                  include_last:bool=False,
-                 font_name:str=None,
-                 font_size:int=None,
-                 unicode_values:dict[str,str]=None,
-                 colors:list[Color]=None
+                 font_name:Optional[str]=None,
+                 font_size:Optional[int]=None,
+                 unicode_values:Optional[dict[str,str]]=None,
+                 colors:Optional[list[Color]]=None
             ):
         assert direction is None or direction in ('left', 'right')
         assert isinstance(widgets, list) and len(widgets) > 0

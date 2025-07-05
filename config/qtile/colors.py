@@ -1,4 +1,4 @@
-from typing import Self
+from typing import Self, Optional
 from random import choices
 import re
 
@@ -11,11 +11,12 @@ class Color:
         self.color = color
 
     @classmethod
-    def random_colors(cls, k:int=None) -> Self|list[Self]:
-        if k is None:
-            return cls('#' + ''.join(choices('0123456789ABCDEF', k=6)))
-        else:
-            return [cls.random_colors() for _ in range(k)]
+    def random_colors(cls, k:int=1) -> list[Self]:
+        return [cls.random_color() for _ in range(k)]
+
+    @classmethod
+    def random_color(cls) -> Self:
+        return cls('#' + ''.join(choices('0123456789ABCDEF', k=6)))
 
     @property
     def c(self):
