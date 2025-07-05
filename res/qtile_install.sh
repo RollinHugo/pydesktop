@@ -17,7 +17,8 @@ sudo pacman -S \
     xorg-xrdb \
     mypy
 
-pikaur -Sy powerline-fonts-git
+pikaur -Sy powerline-fonts-git \
+  networkmanager-dmenu-git
 
 # X11
 sudo localectl set-x11-keymap fr
