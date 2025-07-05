@@ -53,7 +53,7 @@ class ColoredWidgetArray:
         if colors:
             self.colors = colors
         else:
-            self.colors = Color.random_colors(10)
+            self.colors = Solarized
         self.colorize(self.colors)
 
     def get_separator(self) -> TextBox:

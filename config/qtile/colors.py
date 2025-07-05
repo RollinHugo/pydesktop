@@ -48,6 +48,7 @@ S_green = Color('#859900')
 
 Solarized = [
     S_yellow,
+    S_yellow,
     S_orange,
     S_red,
     S_magenta,
